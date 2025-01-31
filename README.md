@@ -38,3 +38,7 @@ The project was developed using the following technologies:
 
 ---
 💻 **Developed by Ednei.**
+
+You can view the project at: [Brazilian ZIP Code Lookup](https://ednei-gonzaga.github.io/Brazilian-ZIP-Code-Lookup/)
+
+
