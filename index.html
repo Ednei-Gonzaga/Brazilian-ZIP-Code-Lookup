@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSULTA CEP</title> 
+
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <!-- Container principal para buscar o CEP -->
+    <div id="containerBusca">
+        <h1>CEP</h1>
+
+        <!-- Campo de entrada para o usuário digitar o CEP e botão para buscar -->
+        <div class="inputBtn">
+            <input type="text" id="cep" placeholder="Digite aqui o CEP (somente números)" maxlength="8">
+            <button id="btnConsulta">BUSCAR CEP</button>
+        </div>
+
+        <p>Digite o código do CEP</p> <!-- Instrução para o usuário -->
+    </div>
+
+    <!-- Container que exibirá o resultado da consulta -->
+    <div class="containerResultado">
+
+        <!-- Seção onde os dados do CEP serão exibidos -->
+        <div class="resultado">
+            <h1 id="tituloResult"></h1> <!-- Título dinâmico que mostra o CEP pesquisado -->
+
+            <div class="divInformacao">
+                <!-- Cada bloco representa um campo de informação do endereço -->
+                <div class="info">
+                    <h2>Cidade</h2>
+                    <p id="cidade"></p>
+                </div>
+
+                <div class="info">
+                    <h2>Sigla Estado</h2>
+                    <p id="sigla"></p>
+                </div>
+
+                <div class="info">
+                    <h2>Estado</h2>
+                    <p id="estado"></p>
+                </div>
+
+                <div class="info">
+                    <h2>País</h2>
+                    <p id="pais"></p>
+                </div>
+
+                <div class="info">
+                    <h2>Logradouro</h2>
+                    <p id="logradouro"></p>
+                </div>
+
+                <div class="info">
+                    <h2>Bairro</h2>
+                    <p id="bairro"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção informativa sobre o que é um CEP -->
+        <div class="informacaoCep">
+            <h1 id="textoInfo">O que é um CEP?</h1>
+            <p id="textoGeral">
+                CEP ou Código de Endereçamento Postal, como também é conhecido, é um sistema de códigos
+                numéricos, criado, mantido e organizado pelos Correios do Brasil para a organização de 
+                endereços e entregas de cartas e encomendas. Se você já fez uma compra pela internet ou 
+                enviou uma carta, você certamente já utilizou um CEP.
+                O CEP é composto por uma sequência de 8 dígitos, onde cada dígito tem um significado e 
+                remete a uma determinada localidade, como um bairro, uma cidade, uma rua ou até um edifício.
+            </p>
+        </div>
+    </div>
+
+    <!-- Importação do arquivo JavaScript para interação com a API -->
+    <script src="script.js"></script>
+</body>
+
+</html>

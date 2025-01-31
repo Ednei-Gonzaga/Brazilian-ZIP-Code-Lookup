@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    /* Azul claro para azul */
+}
+
+
+/*PARTE INPUT E BUTTON*/
+
+#containerBusca,
+.containerInfo {
+    display: grid;
+    justify-items: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+#containerBusca h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    /* Branco */
+}
+
+.inputBtn {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    gap: 3px;
+}
+
+input {
+    max-width: 500px;
+    height: 55px;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #cccccc;
+    /* Cinza claro */
+}
+
+button {
+    height: 55px;
+    padding: 5px;
+    background-color: #ff6f61;
+    /* Coral */
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    color: #ffffff;
+    /* Branco */
+    cursor: pointer;
+}
+
+
+/*PARTE DOS RESULTADOS E "O QUE É CEP"?*/
+
+.containerResultado {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.informacaoCep,.resultado {
+    background-color: #ffffff;
+    /* Branco */
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#textoInfo,
+.resultado h1 {
+    padding: 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    /* Gradiente de laranja para pêssego */
+    color: #ffffff;
+    /* Branco */
+}
+
+#textoGeral {
+    padding: 30px;
+    font-size: 20px;
+    color: #333333;
+    /* Cinza escuro */
+}
+
+
+/*DIV QUE EXIBIRÁ AS INFORMAÇÕES DO CEP*/
+.divInformacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 530px;
+}
+
+.info {
+    display: grid;
+    padding: 10px;
+    gap: 5px;
+}
+
+.info p {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    color: #666666;
+    /* Cinza médio */
+}
+
+
+/*ANIMAÇÕES*/
+
+@keyframes resultado {
+    from {
+        transform: translateX(-800px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes resultado2 {
+    from {
+        transform: translateX(800px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.informacaoCep {
+    animation: resultado2 3s;
+
+}
+
+.resultado {
+    animation: resultado 3s;
+
+}
+
+
+
+/*MOBILE RESPONSIVO*/
+@media (max-width:500px) {
+    .inputBtn {
+        grid-template-columns: 310px ;
+        padding: 10px;
+    }
+     input{
+        font-size: 17px;
+     }
+
+     .informacaoCep,.resultado {
+        margin-left: 10px;
+        margin-right: 10px;
+     }
+     .informacaoCep{
+        margin-bottom: 40px;
+     }
+
+}
