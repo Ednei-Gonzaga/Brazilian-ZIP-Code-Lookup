@@ -36,15 +36,5 @@ The project was developed using the following technologies:
 
 ✅ If the ZIP Code is not found, the system displays an alert informing the user of the failed search.
 
-## 🔧 Future Improvements
-
-🔹 Create a fully responsive version for mobile devices.
-🔹 Implement an **interactive map** based on the searched ZIP Code.
-🔹 Add a **search history system** for user convenience.
-
-## 📜 License
-
-This project is open source and is under the **MIT License**.
-
 ---
 💻 **Developed by Ednei.**
